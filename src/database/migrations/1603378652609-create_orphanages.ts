@@ -1,10 +1,9 @@
-import { text } from "express";
 import {MigrationInterface, QueryRunner, Table} from "typeorm";
 
 export class createOrphanages1603378652609 implements MigrationInterface {
     public async up(queryRunner: QueryRunner): Promise<void> {
        await queryRunner.createTable(new Table({
-           name: 'orphaneges',
+           name: 'orphanages',
            columns: [
                {
                     name: 'id',
@@ -40,8 +39,13 @@ export class createOrphanages1603378652609 implements MigrationInterface {
                 },
                 {
                     name: 'open_on_weekends',
-                    type: 'text',
+                    type: 'varchar',
                 },
+                {
+                    name: 'opening_hours',
+                    type: 'varchar',
+                },
+
            ],
        }))
         // REALIZAR ALTERAÇÕES

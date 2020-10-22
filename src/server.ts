@@ -4,8 +4,8 @@ import './database/connection';
 
 const app = express();
 
-app.get('/users', (request, response) => {
-    return response.json({ message: 'Good Day!'})
+app.post('/orphanages', (request, response) => {
+    return response.json({ message: 'Okay Google!'})
 });
 
 app.listen(3333);
