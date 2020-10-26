@@ -1,19 +1,17 @@
 import express from 'express';
-//import { getRepository } from 'typeorm';
-//import Orphanage from './models/Orphanage';
+import { getRepository } from 'typeorm';
+import Orphanage from './models/Orphanage';
+
 import './database/connection';
 
 const app = express();
 
 app.use(express.json());
 
-app.post('/orphanages', (request, response) => {
-    return response.json({ message: 'It is Alive!!!' });
-});
+//app.post('/orphanages', (request, response) => {
+//    return response.json({ message: 'It is Alive!!!' });
+//});
 
-app.listen(3333);
-
-/*
 app.post('/orphanages', async (request, response) => {
     const {
         name,
@@ -39,10 +37,13 @@ app.post('/orphanages', async (request, response) => {
     });
 
     await orphanagesRepository.save(orphanage);
-    return response.json({ message: 'Okay Google!'});
+    
+    return response.json(orphanage);
    
 });
-*/
+
+app.listen(3333);
+
 
 // Rota = conjunto
 // Recurso = usuários
