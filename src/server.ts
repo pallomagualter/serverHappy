@@ -1,7 +1,7 @@
-import express, { request, response } from 'express';
+import express from 'express';
 //import { getRepository } from 'typeorm';
 //import Orphanage from './models/Orphanage';
-//import './database/connection';
+import './database/connection';
 
 const app = express();
 
