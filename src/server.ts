@@ -1,6 +1,8 @@
 import express from 'express';
-import './database/connection';
 import path from 'path';
+import 'express-async-errors';
+
+import './database/connection';
 
 import routes from './routes';
 
