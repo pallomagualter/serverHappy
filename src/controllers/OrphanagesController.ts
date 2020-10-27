@@ -60,7 +60,7 @@ export default {
         };
 
         const schema = Yup.object().shape({
-            name: Yup.string().required(),
+            name: Yup.string().required('Nome é um campo obrigatório'), //caso queira mudar as mensagens de erro
             latitude: Yup.number().required(),
             longitude: Yup.number().required(),
             about: Yup.string().required().max(300),
