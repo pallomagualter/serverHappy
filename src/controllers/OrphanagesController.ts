@@ -7,7 +7,9 @@ export default {
     async index(request: Request, response: Response) {
         const orphanagesRepository = getRepository(Orphanage);
 
-        const orphanages = await orphanagesRepository.find();
+        const orphanages = await orphanagesRepository.find({
+            relations: ['images']
+        });
 
         return response.json(orphanages);
     },
