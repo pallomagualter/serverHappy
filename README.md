@@ -89,7 +89,7 @@ $ yarn start
 
 ```bash
 # Clone o Repositório
-$  git clone https://github.com/pallomagualter/mobileHappy.git
+$  git clone https://github.com/pallomagualter/happy.git
 
 #Acesse o diretório mobile
 $ cd mobile
